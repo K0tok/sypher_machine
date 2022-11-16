@@ -1,0 +1,38 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Шифровальная машина</title>
+    <link rel="stylesheet" href="siph.css">
+</head>
+<body>
+    <div class="title elem"><b>Шифратор-дешифратор</b></div>
+    <div class="elem">
+        <div style="text-align: end; padding-right: 10px; margin: auto 0;">Выберите способ<br>шифровки:</div>
+        <select multiple="multiple" onSelect="select_sif()" id="select_sif" required>
+            <option value="rot1">ROT1</option>
+            <option value="cezar">Шифр Цезаря</option>
+            <option value="morze">Азбука Морзе</option>
+        </select>
+    </div>
+    <div class="elem">
+        <div style="text-align: end; padding-right: 10px; margin: auto 0;">Введите шаг<br>(если необходимо)</div>
+        <textarea style="width: 250px; height: 60px; font-size: 25px;" id="step"></textarea>
+    </div>
+    <div class="elem">
+        <div style="text-align: end; padding-right: 10px; margin: auto 0;">Расшифрованный текст</div>
+        <textarea style="width: 300px;" id="desif"></textarea>
+        <div style="width: 30px;"></div>
+        <div style="text-align: end; padding-right: 10px; margin: auto 0;">Зашифрованный текст</div>
+        <textarea style="width: 300px;" id="sif"></textarea>
+    </div>
+    <div class="elem">
+        <button id="sifbut" onclick="sipher_func()">Зашифровать</button>
+        <div style="width: 25%"></div>
+        <button id="desifbut" onclick="desipher_func()">Расшифровать</button>
+    </div>
+    <script src="siph.js"></script>
+</body>
+</html>
